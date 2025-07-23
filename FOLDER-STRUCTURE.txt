@@ -1,0 +1,84 @@
+Centre for Preventive Health Website - Folder Structure
+
+Create this exact folder structure for your website:
+
+WordPress-CPH/
+│
+├── index.html                          ← Homepage (main file)
+├── about.html                          ← About Us page
+├── contact.html                        ← Contact page
+├── README.md                           ← Instructions file
+├── FOLDER-STRUCTURE.txt               ← This file
+├── WordPress-Implementation-Guide.md   ← WordPress conversion guide
+├── WordPress-Quick-Reference.md        ← WordPress code snippets
+│
+├── assets/                            ← Create this folder
+│   │
+│   ├── css/                           ← Create this folder
+│   │   ├── style.css                  ← Main styles
+│   │   └── pages.css                  ← Additional page styles
+│   │
+│   ├── js/                            ← Create this folder
+│   │   └── main.js                    ← JavaScript functionality
+│   │
+│   └── images/                        ← Create this folder and add:
+│       ├── logo.png                   ← Your clinic logo (200x60px)
+│       ├── logo-white.png            ← White version for dark backgrounds
+│       ├── dr-shankar-dapkekar.jpg   ← Doctor's professional photo
+│       ├── doctor-consultation.jpg    ← Consultation image
+│       ├── testimonial-1.jpg         ← Patient testimonial photo
+│       ├── testimonial-2.jpg         ← Patient testimonial photo
+│       ├── testimonial-3.jpg         ← Patient testimonial photo
+│       ├── disha-foundation-logo.png ← Partner logo
+│       └── favicon.ico               ← Website icon
+│
+└── (future pages)
+    ├── our-approach.html             ← Create later
+    ├── counselling.html              ← Create later
+    ├── healthy-pune-initiative.html  ← Create later
+    ├── blog.html                     ← Create later
+    ├── privacy-policy.html           ← Create later
+    ├── terms-conditions.html         ← Create later
+    └── medical-disclaimer.html       ← Create later
+
+IMPORTANT STEPS:
+==============
+
+1. CREATE FOLDERS:
+   - Right-click in your WordPress-CPH folder
+   - Create "assets" folder
+   - Inside assets, create "css", "js", and "images" folders
+
+2. ADD YOUR IMAGES:
+   - Add your actual logo files
+   - Add doctor's photo
+   - Add consultation/clinic images
+   - Use optimized web formats (JPG for photos, PNG for logos)
+
+3. UPDATE CONTACT INFO:
+   - Replace all "+91-XXXXXXXXXX" with your phone number
+   - Replace "info@centreforpreventivehealth.com" with your email
+   - Update WhatsApp links with your number
+
+4. TEST LOCALLY:
+   - Open index.html in your browser
+   - Check all links work
+   - Test contact forms
+   - Verify mobile responsiveness
+
+5. DEPLOY:
+   - Upload all files to your web hosting
+   - Or use services like Netlify, Vercel, or GitHub Pages
+
+File Sizes Recommendations:
+==========================
+- Logo files: Under 50KB
+- Doctor photo: Under 200KB
+- Other images: Under 500KB each
+- Optimize images before uploading
+
+Need Help?
+==========
+- Check README.md for detailed instructions
+- Follow WordPress-Implementation-Guide.md to convert to WordPress
+- Use WordPress-Quick-Reference.md for code snippets 
