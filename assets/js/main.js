@@ -23,18 +23,18 @@ function initializeNavigation() {
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.classList.remove('scrolled');
-            navbar.style.backgroundColor = '';
-            navbar.style.backdropFilter = '';
-        }
-    });
+    // Navbar scroll effect - DISABLED FOR TESTING
+    // window.addEventListener('scroll', function() {
+    //     if (window.scrollY > 100) {
+    //         navbar.classList.add('scrolled');
+    //         navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+    //         navbar.style.backdropFilter = 'blur(10px)';
+    //     } else {
+    //         navbar.classList.remove('scrolled');
+    //         navbar.style.backgroundColor = '';
+    //         navbar.style.backdropFilter = '';
+    //     }
+    // });
     
     // Smooth scrolling for anchor links
     navLinks.forEach(link => {
@@ -254,16 +254,8 @@ function initializeAnimations() {
     const animateElements = document.querySelectorAll('.service-card, .testimonial-card, .icon-circle');
     animateElements.forEach(el => observer.observe(el));
     
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('.hero-banner');
-        
-        if (parallax) {
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        }
-    });
+    // All parallax and scroll effects completely disabled
+    // NO SCROLL EFFECTS ON HERO BANNER
 }
 
 /* ===================================
