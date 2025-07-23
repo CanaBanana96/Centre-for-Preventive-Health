@@ -289,8 +289,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #396A25;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    min-height: 50vh;
+    padding: 6rem 0;
     display: flex;
     align-items: center;
     color: var(--white);
@@ -726,8 +725,7 @@ footer a:hover {
     }
     
     .hero-banner {
-        min-height: 45vh;
-        background-attachment: scroll;
+        padding: 4rem 0;
     }
     
     .whatsapp-btn {
@@ -782,9 +780,9 @@ footer a:hover {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Scroll Behavior */
+/* Scroll Behavior - Disabled for testing */
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 /* Loading States */
