@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initializeNavigation() {
     const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Mobile menu controls
+    const navbarCollapse = document.querySelector('#navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
     
     // Navbar scroll effect - DISABLED FOR TESTING
     // window.addEventListener('scroll', function() {
@@ -37,7 +40,8 @@ function initializeNavigation() {
     // });
     
     // Smooth scrolling for anchor links
-    navLinks.forEach(link => {
+    const allNavLinks = document.querySelectorAll('.nav-link');
+    allNavLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             if (href && href.startsWith('#')) {
@@ -53,12 +57,20 @@ function initializeNavigation() {
         });
     });
     
-    // Mobile menu close on link click
-    const navbarCollapse = document.querySelector('#navbarNav');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    
-    navLinks.forEach(link => {
+    // Mobile menu auto-close for regular nav links (NOT dropdown toggles)
+    const regularNavLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    regularNavLinks.forEach(link => {
         link.addEventListener('click', function() {
+            if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        });
+    });
+    
+    // Mobile menu auto-close for dropdown items
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function() {
             if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
                 navbarToggler.click();
             }
